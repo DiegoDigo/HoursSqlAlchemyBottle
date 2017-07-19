@@ -34,7 +34,3 @@ class Perfil(Base):
 
 Base.metadata.create_all(engine)
 
-
-
-if __name__ == '__main__':
-    print(list(row.last_name, row.perfil_id) for row in getAll(Perfil))
