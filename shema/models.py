@@ -3,9 +3,9 @@ from sqlalchemy import (create_engine, Column, String, Integer, DateTime, Foreig
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 
-engine = create_engine('postgresql+psycopg2://postgres:261216@localhost:5432/hour')
-
 Base = declarative_base()
+
+engine = create_engine('postgresql+psycopg2://postgres:261216@localhost:5432/hour')
 
 Session = sessionmaker(bind=engine)
 
@@ -33,4 +33,5 @@ class Perfil(Base):
 
 
 Base.metadata.create_all(engine)
+
 
